@@ -58,7 +58,7 @@ ev-dashboard/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/ev-dashboard.git
+git clone https://github.com/kpedidogodonou/ev-dashboard.git
 cd ev-dashboard
 ```
 
@@ -122,7 +122,7 @@ plotly
 ## 👤 Author
 
 **Kpêdido Godonou**  
-[🌐 axigbe.com](https://axigbe.com) | [📧 Contact](mailto:you@example.com)
+[🌐 kpedido.com](https://kpedido.com) | [📧 Contact](mailto:kpedido.godonou@gmail.com)
 
 ---
 
