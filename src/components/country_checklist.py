@@ -1,8 +1,6 @@
 import pandas as pd
 from dash import Dash, dcc, html
-from dash.dependencies import Input, Output
 
-from ..data.loader import DataSchema
 from . import ids
 
 
@@ -14,7 +12,7 @@ def render(app: Dash, data: pd.DataFrame) -> html.Div:
 
     return html.Div(
         children=[
-            html.H6("Year"),
+            html.H6("Countries"),
 
             dcc.Checklist(
                 id=ids.COUNTRIES_CHECKLIST,

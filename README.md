@@ -38,9 +38,10 @@ ev-dashboard/
 ├── src/
 │   ├── components/                   # Dash components and layouts
 │   │   ├── bar_chart.py
+│   │   ├── country_checklist.py
 │   │   ├── ids.py
 │   │   ├── layout.py
-│   │   ├── nation_dropdown.py
+│   │   ├── line_chart.py
 │   │   ├── year_dropdown.py
 │   │   └── __init__.py
 │   ├── data/                         # Data loading and utilities

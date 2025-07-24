@@ -6,13 +6,13 @@ from ..data.loader import DataSchema
 from . import ids
 
 
-def render(app: Dash, data: pd.DataFrame) -> html.Div:
+def render(app: Dash, data: pd.DataFrame, id) -> html.Div:
     all_years: list[str] = data[DataSchema.YEAR].tolist()
     unique_years = sorted(set(all_years), key=int)
 
     @app.callback(
-        Output(ids.YEAR_DROPDOWN, "value"),
-        Input(ids.SELECT_ALL_YEARS_BUTTON, "n_clicks"),
+        Output(f"{ids.YEAR_DROPDOWN}-{id}", "value"),
+        Input(f"{ids.SELECT_ALL_YEARS_BUTTON}-{id}", "n_clicks"),
     )
     def select_all_years(_: int) -> list[str]:
         return unique_years
@@ -21,7 +21,7 @@ def render(app: Dash, data: pd.DataFrame) -> html.Div:
         children=[
             html.H6("Years"),
             dcc.Dropdown(
-                id=ids.YEAR_DROPDOWN,
+                id=f"{ids.YEAR_DROPDOWN}-{id}",
                 options=[{"label": year, "value": year} for year in unique_years],
                 value=unique_years,
                 multi=True,
@@ -29,7 +29,7 @@ def render(app: Dash, data: pd.DataFrame) -> html.Div:
             html.Button(
                 className="dropdown-button",
                 children=["Select All"],
-                id=ids.SELECT_ALL_YEARS_BUTTON,
+                id=f"{ids.SELECT_ALL_YEARS_BUTTON}-{id}",
                 n_clicks=0,
             ),
         ]

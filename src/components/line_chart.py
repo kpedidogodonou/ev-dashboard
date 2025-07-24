@@ -24,7 +24,7 @@ def render(app: Dash, data: pd.DataFrame) -> html.Div:
             color=DataSchema.COUNTRY_NAME,
             markers=True,
             title="Share of cars currently in use that are electric, 2010 to 2024",
-            labels={'ev_stock_share':'Share of car stocks that are electric', 'year': 'years'} 
+            labels={'ev_stock_share':'Share of car stocks that are electric (%)', 'year': 'years'} 
         )
         return html.Div(dcc.Graph(figure=fig), id=ids.LINE_CHART)
     return html.Div(id=ids.LINE_CHART)
