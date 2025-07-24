@@ -1,5 +1,6 @@
 BAR_CHART = "bar-chart"
 PIE_CHART = "pie-chart"
+LINE_CHART = "line-chart"
 
 NATION_DROPDOWN = "nation-dropdown"
 SELECT_ALL_NATIONS_BUTTON = "select-all-nations-button"
@@ -10,3 +11,6 @@ CATEGORY_DROPDOWN = "category-dropdown"
  
 YEAR_DROPDOWN = "year-dropdown"
 SELECT_ALL_YEARS_BUTTON = "select-all-years-button"
+
+ 
+COUNTRIES_CHECKLIST = "countries-checklist"
