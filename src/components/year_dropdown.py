@@ -19,13 +19,21 @@ def render(app: Dash, data: pd.DataFrame, id) -> html.Div:
 
     return html.Div(
         children=[
-            html.H6("Years"),
+            #Title
+            html.H6(
+                className="badge bg-warning text-dark",
+                children="Years"
+            ),
+            
+            #Filter
             dcc.Dropdown(
                 id=f"{ids.YEAR_DROPDOWN}-{id}",
                 options=[{"label": year, "value": year} for year in unique_years],
                 value=unique_years,
                 multi=True,
             ),
+            
+            #Extra Button
             html.Button(
                 className="dropdown-button",
                 children=["Select All"],

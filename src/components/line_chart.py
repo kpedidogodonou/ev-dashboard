@@ -3,14 +3,16 @@ import plotly.express as px
 import pandas as pd
 from . import ids
 from ..data.loader import DataSchema
+import plotly.io as pio
+pio.templates.default = "plotly"
 
 MEDAL_DATA = px.data.medals_long()
 
-def render(app: Dash, data: pd.DataFrame) -> html.Div:
+def render(app: Dash, data: pd.DataFrame, id, title, ylabel) -> html.Div:
 
     @callback(
-        Output(ids.LINE_CHART, "children"),
-        Input(ids.COUNTRIES_CHECKLIST, "value"),
+        Output(f"{ids.LINE_CHART}-{id}", "children"),
+        Input(f"{ids.COUNTRIES_CHECKLIST}-{id}", "value"),
         )
     def update_line_chart(countries: list[str]) -> html.Div:
         filtered_data = data.query("country in @countries")
@@ -23,11 +25,12 @@ def render(app: Dash, data: pd.DataFrame) -> html.Div:
             y=DataSchema.EV_STOCK_SHARE,
             color=DataSchema.COUNTRY_NAME,
             markers=True,
-            title="Share of cars currently in use that are electric, 2010 to 2024",
-            labels={'ev_stock_share':'Share of car stocks that are electric (%)', 'year': 'years'} 
+            title=title,
+            labels={'ev_stock_share':ylabel, 'year': 'years'},
+            template="plotly",
         )
-        return html.Div(dcc.Graph(figure=fig), id=ids.LINE_CHART)
-    return html.Div(id=ids.LINE_CHART)
+        return html.Div(dcc.Graph(figure=fig), id=f"{ids.LINE_CHART}-{id}")
+    return html.Div(id=f"{ids.LINE_CHART}-{id}")
 
 
 

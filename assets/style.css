@@ -8,6 +8,17 @@ hr {
     gap: 10px;
 }
 
+.countries-container {
+  
+}
+
+#countries-checklist-ev-share-stock {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
 .dropdown-button {
     width: 100%;
     margin-top: 5px;
@@ -54,8 +65,16 @@ hr {
     padding-bottom: 20px;
 }
 
+
+.section-title {
+    color: aliceblue;
+    padding: 10px;
+    background-color: cadetblue;
+}
+
 @media(max-width: 800px) {
     .dropdown-container {
         grid-template-columns: 1fr;
     }
 }
+
