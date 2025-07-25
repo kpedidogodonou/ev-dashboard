@@ -83,7 +83,7 @@ Then visit: [http://localhost:8050](http://localhost:8050)
 
 ## 📈 Dashboard Features
 
-- 📊 **EV vs Non-EV Sales** (stacked bar chart)
+- 📊 **EV vs Non-EV Sales** (area chart)
 - 🔌 **BEV vs PHEV Adoption** by country and year
 - 🌍 **Country-specific dropdown filters**
 - 📅 **Year range selectors**
@@ -118,7 +118,7 @@ plotly
 - Norway leads with ~90% of new car sales being electric.
 - Global EV sales have grown exponentially since 2020.
 - Plug-in hybrids are more common in countries with weaker charging infrastructure.
-- EV market share is rising but ICE cars still dominate globally.
+- EV market share is rising but Internal Combustion Engine (ICE) cars still dominate globally.
 
 ---
 
