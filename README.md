@@ -37,8 +37,10 @@ ev-dashboard/
 │   └── requirements.txt              # All dependencies listed here
 ├── src/
 │   ├── components/                   # Dash components and layouts
+│   │   ├── area_graph.py
 │   │   ├── bar_chart.py
 │   │   ├── country_checklist.py
+│   │   ├── data_grid.py
 │   │   ├── ids.py
 │   │   ├── layout.py
 │   │   ├── line_chart.py
