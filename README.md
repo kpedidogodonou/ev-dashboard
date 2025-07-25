@@ -1,6 +1,6 @@
 # ⚡ Global Electric Vehicle (EV) Adoption Dashboard (2010–2024)
 
-This interactive dashboard visualizes global electric vehicle adoption trends using data from 2010 to 2024. Built with **Dash**, **Plotly**, and **Pandas**, the project explores EV vs non-EV sales, BEV vs PHEV breakdowns, and market share comparisons by country and year.
+This interactive dashboard visualizes global Electric Vehicle (EV) adoption trends using data from 2010 to 2024. Built with **Dash**, **Plotly**, and **Pandas**, the project explores EV vs non-EV sales, Battery Electric Vehicles (BEV) vs (Plug Hybrid Electric Vehicle )PHEV breakdowns, and market share comparisons by country and year.
 
 ---
 
